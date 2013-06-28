@@ -16,3 +16,20 @@ alias l='ls'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# git aliases
+alias up='git fetch; git merge upstream/master;' 
+function new { git checkout -b $1; up; }
+alias com='git commit -a'
+alias acom='git commit -a --amend'
+alias sw='git checkout'
+alias st='git status'
+alias br='git branch'
+alias cont='git rebase --continue'
+alias del='sw master; git branch -D'
+
+export GIT_EDITOR=emacs
