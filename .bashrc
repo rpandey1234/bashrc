@@ -17,10 +17,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
 # git aliases
 alias up='git fetch; git merge upstream/master;' 
 function new { git checkout -b $1; up; }
