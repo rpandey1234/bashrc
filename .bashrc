@@ -28,5 +28,6 @@ alias br='git branch -v'
 alias cont='git rebase --continue'
 alias del='sw master; git branch -D'
 alias gl='git log'
+alias glp='git log --pretty=format:"%h - %an, %ar : %s"'
 
 export GIT_EDITOR=emacs
