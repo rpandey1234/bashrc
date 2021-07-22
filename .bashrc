@@ -3,6 +3,21 @@
 
 # aliases go in this file!
 
+# Take a screenshot of the device and put it on the Desktop
+alias screenshot="adb exec-out screencap -p > ~/Desktop/screen-$(date -j "+%s").png"
+
+# Send text to your device. Usage: $ atext https://www.youtube.com/user/rpandey1234
+alias atext='adb shell input text'
+
+# Send the BACK keypress to your device
+alias aback='adb shell input keyevent KEYCODE_BACK'
+
+# Given a username/password form, log in with the given user. Focus should be on the
+# username edit text. Usage example: $ alogin john
+alogin() {
+  atext "$1" && adb shell input keyevent KEYCODE_TAB && atext MyTestPassword
+}
+
 alias xcode='open -a xcode'
 alias ll='ls -ltr'
 alias la='ls -a'
