@@ -33,7 +33,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # git aliases
-alias up='git fetch; git merge upstream/master;' 
+alias up='git fetch; git rebase origin/main;' 
 # function new { git checkout -b $1; up; }
 alias com='git commit -a'
 alias acom='git commit -a --amend'
@@ -41,7 +41,7 @@ alias sw='git checkout'
 alias st='git status'
 alias br='git branch -v'
 alias cont='git rebase --continue'
-alias del='sw master; git branch -D'
+alias del='sw main; git branch -D'
 alias gl='git log'
 alias glp='git log --pretty=format:"%C(yellow)%h%Creset - %C(green)%an%Creset, %ar : %s"'
 alias glt='git log --graph --oneline --all --decorate'
